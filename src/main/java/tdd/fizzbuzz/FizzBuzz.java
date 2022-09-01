@@ -12,6 +12,8 @@ public class FizzBuzz {
             return "FizzBuzz";
         } else if (order % 3 == 0 && order % 7 == 0) {
             return "FizzWhizz";
+        } else if (order % 5 == 0 && order % 7 == 0){
+            return "BuzzWhizz";
         } else {
             if (order % 3 == 0) {
                 return FIZZ;
