@@ -4,31 +4,27 @@ import static java.lang.Integer.valueOf;
 
 public class FizzBuzz {
     public String countOff(int order) {
-        String FIZZ = "Fizz";
-        final String buzz = "Buzz";
-        final String whizz = "Whizz";
+        StringBuilder message = new StringBuilder();
+        String fizz = "Fizz";
+        String buzz = "Buzz";
+        String whizz = "Whizz";
 
-        if (order % 3 == 0 && order % 5 == 0) {
-            return "FizzBuzz";
-        } else if (order % 3 == 0 && order % 7 == 0) {
-            return "FizzWhizz";
-        } else if (order % 5 == 0 && order % 7 == 0){
-            return "BuzzWhizz";
-        } else {
-            if (order % 3 == 0) {
-                return FIZZ;
+            if (order % 3 == 0){
+                message.append(fizz);
             }
 
-            if (order % 5 == 0) {
-                return buzz;
+            if (order % 5 == 0){
+                message.append(buzz);
             }
 
-            if (order % 7 == 0) {
-                return whizz;
+            if (order % 7 == 0){
+                message.append(whizz);
             }
 
-            return String.valueOf(order);
+        if (message.length() == 0){
+            message.append(order);
         }
 
+        return message.toString();
     }
 }
