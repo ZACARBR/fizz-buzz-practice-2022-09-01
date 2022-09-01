@@ -8,22 +8,23 @@ public class FizzBuzz {
         final String buzz = "Buzz";
         final String whizz = "Whizz";
 
-        if (order % 3 == 0 && order % 5 == 0){
+        if (order % 3 == 0 && order % 5 == 0) {
             return "FizzBuzz";
+        } else {
+            if (order % 3 == 0) {
+                return FIZZ;
+            }
+
+            if (order % 5 == 0) {
+                return buzz;
+            }
+
+            if (order % 7 == 0) {
+                return whizz;
+            }
+
+            return String.valueOf(order);
         }
 
-        if (order % 3 == 0) {
-            return FIZZ;
-        }
-
-        if (order % 5 == 0){
-            return buzz;
-        }
-
-        if (order % 7 == 0){
-            return whizz;
-        }
-
-        return String.valueOf(order);
     }
 }
