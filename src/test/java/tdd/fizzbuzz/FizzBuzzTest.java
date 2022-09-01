@@ -10,9 +10,9 @@ public class FizzBuzzTest {
     void should_return_1_when_count_off_given_number_1() {
         //given
         FizzBuzz fizzBuzz = new FizzBuzz();
-        Integer expected = 1;
+        String expected = "1";
         //when
-        Integer actual = fizzBuzz.countOff(1);
+        String actual = fizzBuzz.countOff(1);
 
         //then
         assertEquals(expected, actual);
@@ -24,7 +24,7 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String expected = "Fizz";
         //when
-        Integer actual = fizzBuzz.countOff(3);
+        String actual = fizzBuzz.countOff(3);
 
         //then
         assertEquals(expected, actual);
